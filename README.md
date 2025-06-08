@@ -1,7 +1,7 @@
 # walter.comproposito.github.io
 Hub oficial de Walter Miranda — corretor de imóveis com propósito, mentor de ativação pessoal e servo do Reino. Conectando pessoas a destinos com excelência, fé e transformação real.
 
-#   Walter Miranda | Com Propósito
+#               Walter Miranda | Com Propósito
 
 🚀 Site oficial de Walter Miranda — corretor de imóveis com propósito, mentor de ativação pessoal e servidor cristão.
 
