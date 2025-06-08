@@ -1,303 +1,82 @@
-/* Importação de Fontes do Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap');
-
-/* Variáveis CSS para Cores - Facilita a manutenção */
-:root {
-    --bg-dark-primary: #0f1e17; /* Verde escuro principal */
-    --bg-dark-secondary: #1a2a1f; /* Verde escuro para seções */
-    --color-gold: #d4af37; /* Dourado */
-    --color-gold-hover: #bfa22f; /* Dourado mais escuro para hover */
-    --text-light: #f4f4f4; /* Texto off-white */
-    --border-color: #2e4635; /* Cor da borda */
-    --text-muted: #999; /* Texto rodapé/secundário */
-}
-
-/* Estilos Globais e Reset Básico */
 body {
-    font-family: 'Lato', sans-serif; /* Fonte para o corpo do texto */
-    background-color: var(--bg-dark-primary);
-    color: var(--text-light);
-    margin: 0;
-    padding: 0;
-    text-align: center; /* Centraliza todo o conteúdo */
-    line-height: 1.6;
-    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
-    display: flex;
-    flex-direction: column; /* Organiza o conteúdo em coluna */
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #111;
+  color: #fff;
+  text-align: center;
 }
 
-/* Cabeçalho */
-.header {
-    padding: 60px 20px 40px;
-    background-color: var(--bg-dark-primary);
+.container {
+  padding: 2rem;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.header img {
-    width: 160px; /* Tamanho ligeiramente ajustado para elegância */
-    height: auto;
-    margin-bottom: 25px;
-    border-radius: 50%; /* Se for um ícone redondo, mantém a forma */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+.hero {
+  margin-top: 5vh;
 }
 
-.header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3em; /* Ajuste para um tamanho impactante */
-    color: var(--color-gold);
-    margin: 0;
-    line-height: 1.2;
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem;
+  color: #ffd700;
 }
 
-.header h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.5em;
-    font-weight: 400;
-    color: var(--text-light);
-    margin-top: 10px;
-    line-height: 1.4;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1.5rem;
+  color: #ccc;
 }
 
-/* Conteúdo Principal */
-.main-content {
-    flex-grow: 1; /* Permite que o main ocupe o espaço restante */
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Centraliza seções */
+.cta-button {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
 }
 
-/* Seções de Conteúdo */
-.section {
-    max-width: 700px; /* Largura um pouco menor para foco */
-    margin: 30px auto; /* Margem ajustada */
-    background-color: var(--bg-dark-secondary);
-    padding: 40px 30px; /* Padding interno */
-    border-radius: 10px;
-    border: 1px solid var(--border-color);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Sombra mais visível */
-    text-align: left; /* Alinha o texto dentro da seção à esquerda */
-    width: 100%; /* Garante que ocupe a largura máxima dentro do max-width */
+.cta-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
 }
 
-.section h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2em; /* Tamanho maior para títulos de seção */
-    color: var(--color-gold);
-    margin-top: 0;
-    margin-bottom: 25px;
-    text-align: center; /* Centraliza o título da seção */
+.about {
+  margin: 3rem 0;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ddd;
 }
 
-.about-section p {
-    font-size: 1.1em;
-    margin-bottom: 15px;
-    text-align: justify; /* Justifica o texto para melhor leitura */
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+.social-links h2 {
+  font-size: 1.3rem;
+  color: #ffd700;
+  margin-bottom: 1rem;
 }
 
-.about-section p strong {
-    color: var(--color-gold);
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
-
-/* Links da Lista */
-.links-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.icons a img {
+  width: 36px;
+  height: 36px;
+  transition: transform 0.3s ease;
 }
 
-.links-section li {
-    margin-bottom: 15px;
+.icons a img:hover {
+  transform: scale(1.2);
 }
 
-.link-item {
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Centraliza o ícone e o texto */
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 1.1em;
-    padding: 12px 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 8px;
-    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-    max-width: 400px; /* Limita a largura dos links */
-    margin: 0 auto; /* Centraliza os links individualmente */
-}
-
-.link-item i {
-    margin-right: 12px;
-    color: var(--color-gold); /* Cor do ícone */
-    font-size: 1.2em;
-    transition: color 0.3s ease;
-}
-
-.link-item:hover {
-    background-color: var(--border-color); /* Fundo sutil no hover */
-    color: var(--color-gold); /* Texto dourado no hover */
-    border-color: var(--color-gold);
-}
-
-.link-item:hover i {
-    color: var(--text-light); /* Ícone branco no hover */
-}
-
-
-/* Botão Principal (WhatsApp) */
-.btn {
-    display: inline-block;
-    padding: 18px 35px; /* Tamanho maior para destaque */
-    background-color: var(--color-gold);
-    color: var(--bg-dark-primary); /* Texto escuro no botão dourado */
-    border-radius: 8px;
-    font-weight: 700; /* Mais negrito */
-    text-decoration: none;
-    font-size: 1.2em;
-    transition: background-color 0.3s ease, transform 0.2s ease; /* Efeito de transição */
-    margin-top: 30px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra para o botão */
-}
-
-.btn i {
-    margin-right: 10px;
-}
-
-.btn:hover {
-    background-color: var(--color-gold-hover);
-    transform: translateY(-2px); /* Pequeno efeito de elevação */
-}
-
-/* Ícones Sociais */
-.social-section {
-    margin: 50px auto;
-    max-width: 600px;
-    text-align: center;
-}
-
-.social-section h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.8em;
-    color: var(--color-gold);
-    margin-bottom: 30px;
-}
-
-.social-icons a {
-    margin: 0 15px;
-    font-size: 36px; /* Ícones maiores */
-    color: var(--color-gold);
-    transition: color 0.3s ease, transform 0.2s ease;
-    text-decoration: none; /* Remover sublinhado */
-}
-
-.social-icons a:hover {
-    color: var(--text-light); /* Ficam brancos no hover */
-    transform: translateY(-3px); /* Efeito de elevação */
-}
-
-/* Rodapé */
-.footer {
-    padding: 30px 20px;
-    background-color: var(--bg-dark-secondary);
-    border-top: 1px solid var(--border-color);
-    font-size: 0.9em;
-    color: var(--text-muted);
-    margin-top: auto; /* Empurra o rodapé para o fim da página */
-}
-
-.footer p {
-    margin: 5px 0;
-}
-
-/* Responsividade Básica para telas menores (smartphones) */
-@media (max-width: 768px) {
-    .header h1 {
-        font-size: 2.5em;
-    }
-
-    .header h2 {
-        font-size: 1.3em;
-    }
-
-    .section {
-        margin: 25px 15px; /* Margem lateral ajustada */
-        padding: 30px 20px;
-    }
-
-    .section h3 {
-        font-size: 1.6em;
-    }
-
-    .about-section p {
-        font-size: 1em;
-        text-align: left; /* Mantém alinhamento à esquerda para melhor leitura em mobile */
-    }
-
-    .link-item {
-        font-size: 1em;
-        padding: 10px 15px;
-        max-width: 90%; /* Ocupa mais largura em mobile */
-    }
-
-    .btn {
-        padding: 15px 25px;
-        font-size: 1.1em;
-    }
-
-    .social-icons a {
-        font-size: 30px;
-        margin: 0 10px;
-    }
-
-    .footer {
-        padding: 20px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    .header h1 {
-        font-size: 2em;
-    }
-
-    .header h2 {
-        font-size: 1.1em;
-    }
-
-    .header img {
-        width: 140px;
-    }
-
-    .section {
-        padding: 25px 15px;
-    }
-
-    .section h3 {
-        font-size: 1.4em;
-    }
-
-    .link-item {
-        flex-direction: column; /* Coloca ícone e texto em linhas separadas em telas muito pequenas */
-        padding: 15px 10px;
-        font-size: 0.95em;
-    }
-
-    .link-item i {
-        margin-right: 0;
-        margin-bottom: 8px; /* Espaço entre ícone e texto */
-    }
-
-    .btn {
-        font-size: 1em;
-        padding: 12px 20px;
-    }
-
-    .social-icons a {
-        font-size: 26px;
-        margin: 0 8px;
-    }
+footer {
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #888;
 }
