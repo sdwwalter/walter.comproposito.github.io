@@ -1,12 +1,12 @@
 :root {
-    --bg-color: #0f1a14; /* Verde musgo escuro - fundo */
+    --bg-color: #0f1a14; /* Fundo escuro refinado */
     --highlight-color: #d4af37; /* Dourado */
-    --text-base-color: #f9f9f9; /* Texto claro */
-    --text-secondary-color: #cfcfcf; /* Texto secundário claro */
-    --accent-color: #a8bba8; /* Verde claro para destaques */
+    --text-base-color: #fff; /* Texto claro */
+    --text-secondary-color: #ccc; /* Texto secundário */
+    --accent-color: #d4af37; /* Destaques em dourado */
 }
 
-/* Reset básico e estilos gerais */
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -53,50 +53,56 @@ body {
 /* Header */
 header {
     background-color: var(--bg-color);
-    padding: 20px;
-    text-align: left;
+    padding: 30px 20px;
 }
 
-.header-content {
+.header-content.horizontal-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .logo {
-    max-width: 200px;
+    max-width: 100px;
     height: auto;
 }
 
-/* Hero Section */
-.hero-section {
-    text-align: center;
-    padding: 80px 20px;
-    background-color: var(--bg-color);
+.title-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.hero-section h1 {
-    font-size: 3em;
+.title-block h1 {
+    font-size: 2.2em;
     color: var(--text-base-color);
-    margin-bottom: 15px;
+    margin-bottom: 5px;
 }
 
-.hero-section .tagline {
-    font-size: 1.4em;
+.title-block .tagline {
+    font-size: 1.2em;
     color: var(--text-secondary-color);
-    margin-bottom: 25px;
+}
+
+/* Hero (pode remover se está no header) */
+.hero-section {
+    display: none;
 }
 
 /* Connect Section */
 .connect-section {
-    background-color: #13291f; /* Verde musgo médio */
+    background-color: #111;
     padding: 60px 20px;
     text-align: center;
-    border-top: 1px solid #2b4a37;
+    border-top: 1px solid #222;
 }
 
 .connect-section h2 {
     font-size: 2.5em;
-    color: var(--text-base-color);
+    color: var(--highlight-color);
     margin-bottom: 40px;
 }
 
@@ -108,19 +114,14 @@ header {
     flex-wrap: wrap;
 }
 
-.social-icons a {
-    display: inline-block;
-    transition: transform 0.3s ease;
-}
-
 .social-icons img {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    filter: brightness(0) invert(1);
+    transition: transform 0.3s ease;
 }
 
-.social-icons a:hover {
+.social-icons a:hover img {
     transform: scale(1.1);
 }
 
@@ -137,8 +138,8 @@ header {
     padding: 15px 30px;
     border-radius: 5px;
     text-decoration: none;
-    font-weight: 700;
-    color: var(--bg-color);
+    font-weight: bold;
+    color: white;
     background-color: var(--highlight-color);
     transition: background-color 0.3s ease;
 }
@@ -149,31 +150,32 @@ header {
 
 .btn-secondary {
     background-color: var(--accent-color);
-    color: var(--bg-color);
-}
-
-.btn-secondary:hover {
-    background-color: #8aa47f;
 }
 
 /* Footer */
 footer {
-    background-color: var(--bg-color);
+    background-color: #0e1612;
     color: var(--text-secondary-color);
     text-align: center;
     padding: 30px 20px;
     font-size: 0.9em;
     margin-top: auto;
-    border-top: 1px solid #2b4a37;
+    border-top: 1px solid #222;
 }
 
-/* Media Queries para Responsividade */
+/* Responsivo */
 @media (max-width: 768px) {
-    .hero-section h1 {
-        font-size: 2.5em;
+    .header-content.horizontal-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .social-icons {
-        gap: 20px;
+    .title-block h1 {
+        font-size: 1.8em;
+    }
+
+    .title-block .tagline {
+        font-size: 1em;
     }
 }
