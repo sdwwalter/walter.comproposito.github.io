@@ -4,8 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Walter Miranda | Com Propósito</title>
-  <meta name="description" content="Walter Miranda | Corretor de imóveis e mentor com propósito. Conectando destinos e transformando vidas com excelência e fé." />
-  <link rel="icon" href="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
@@ -121,33 +119,99 @@
       font-size: 14px;
       color: #aaa;
     }
+
+    /* Botão flutuante WhatsApp */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 999;
+    }
+
+    .whatsapp-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      box-shadow: 0 0 12px #d4af37;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-icon:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-balloon {
+      display: none;
+      position: absolute;
+      bottom: 80px;
+      right: 0;
+      width: 260px;
+      background-color: #051616;
+      border: 1px solid #d4af37;
+      border-radius: 12px;
+      padding: 10px;
+      color: #fff;
+      font-size: 14px;
+      box-shadow: 0 0 10px #d4af37;
+    }
+
+    .balloon-img {
+      width: 50px;
+      float: left;
+      margin-right: 10px;
+      border-radius: 50%;
+    }
+
+    .balloon-text p {
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .whatsapp-link {
+      color: #d4af37;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    @media (hover: hover) {
+      .whatsapp-float:hover .whatsapp-balloon {
+        display: block;
+      }
+    }
+
+    @media (hover: none) {
+      .whatsapp-icon:active + .whatsapp-balloon,
+      .whatsapp-balloon:active {
+        display: block;
+      }
+    }
   </style>
 </head>
 <body>
   <header>
-    <img src="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" alt="Logo da marca Walter Miranda" class="logo" />
+    <img src="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" alt="Logo Walter Miranda" class="logo" />
     <h1>Walter Miranda | Com Propósito</h1>
     <p class="tagline">Servindo com propósito. Conectando destinos. Transformando vidas.</p>
   </header>
 
   <main>
-    <section class="connect-section" id="contato">
+    <section class="connect-section">
       <h2>Fale comigo</h2>
       <div class="icones">
-        <a href="https://instagram.com/euwaltermiranda" target="_blank" aria-label="Instagram de Walter Miranda">
-          <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Ícone do Instagram de Walter Miranda" />
+        <a href="https://instagram.com/euwaltermiranda" target="_blank" aria-label="Instagram">
+          <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Ícone Instagram" />
         </a>
-        <a href="https://wa.me/5543988616329?text=Olá%2C+Walter%21+Vi+seu+site+e+gostaria+de+saber+mais+sobre+%5Bcorretagem+ou+mentoria%5D." target="_blank" aria-label="WhatsApp de Walter Miranda">
-          <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="Ícone do WhatsApp de Walter Miranda" />
+        <a href="https://wa.me/5543988616329?text=Olá%2C+Walter%21+Vi+seu+site+e+gostaria+de+saber+mais+sobre+%5Bcorretagem+ou+mentoria%5D." target="_blank" aria-label="WhatsApp">
+          <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="Ícone WhatsApp" />
         </a>
-        <a href="mailto:walter.comproposito@gmail.com" aria-label="E-mail de Walter Miranda">
-          <img src="https://i.ibb.co/B2YJPcM1/IMG-20250608-WA0006.jpg" alt="Ícone de e-mail de Walter Miranda" />
+        <a href="mailto:walter.comproposito@gmail.com" aria-label="Email">
+          <img src="https://i.ibb.co/B2YJPcM1/IMG-20250608-WA0006.jpg" alt="Ícone Email" />
         </a>
-        <a href="https://www.youtube.com/@WalterMirandacomProposito" target="_blank" aria-label="YouTube de Walter Miranda">
-          <img src="https://i.ibb.co/7JKxjjz0/IMG-20250608-WA0010.jpg" alt="Ícone do canal do YouTube de Walter Miranda" />
+        <a href="https://www.youtube.com/@WalterMirandacomProposito" target="_blank" aria-label="YouTube">
+          <img src="https://i.ibb.co/7JKxjjz0/IMG-20250608-WA0010.jpg" alt="Ícone YouTube" />
         </a>
-        <a href="https://tiktok.com" target="_blank" aria-label="TikTok de Walter Miranda">
-          <img src="https://i.ibb.co/HDs9GYpK/IMG-20250608-WA0007.jpg" alt="Ícone do TikTok de Walter Miranda" />
+        <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+          <img src="https://i.ibb.co/HDs9GYpK/IMG-20250608-WA0007.jpg" alt="Ícone TikTok" />
         </a>
       </div>
 
@@ -162,5 +226,18 @@
     <p>&copy; 2025 Walter Miranda | Com Propósito. Todos os direitos reservados.</p>
     <p>CNPJ 56.345.153/0001-25</p>
   </footer>
+
+  <!-- Botão flutuante de WhatsApp -->
+  <div class="whatsapp-float" id="whatsappFloat">
+    <div class="whatsapp-balloon" id="whatsappBalloon">
+      <img src="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" alt="Logo Walter Miranda" class="balloon-img" />
+      <div class="balloon-text">
+        <p><strong>Walter Miranda</strong><br>Atendendo com propósito 🙌<br><a href="https://wa.me/5543988616329?text=Olá%2C+Walter%21+Vi+seu+site+e+gostaria+de+saber+mais+sobre+%5Bcorretagem+ou+mentoria%5D." target="_blank" class="whatsapp-link">Chamar no WhatsApp</a></p>
+      </div>
+    </div>
+    <a href="https://wa.me/5543988616329?text=Olá%2C+Walter%21+Vi+seu+site+e+gostaria+de+saber+mais+sobre+%5Bcorretagem+ou+mentoria%5D." target="_blank" aria-label="Fale comigo no WhatsApp">
+      <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="Ícone WhatsApp" class="whatsapp-icon">
+    </a>
+  </div>
 </body>
 </html>
