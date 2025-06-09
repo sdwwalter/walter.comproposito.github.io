@@ -2,24 +2,31 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
   padding: 20px;
-}
-
-.title-block h1 {
-  font-size: 2em;
-  margin-bottom: 10px;
-  color: white;
-}
-
-.title-block .tagline {
-  font-size: 1.1em;
-  color: #ccc;
-  margin: 0;
 }
 
 .logo {
   max-width: 120px;
   height: auto;
-  border-radius: 12px;
+}
+
+.title-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.title-block h1 {
+  font-size: 2.2em;
+  color: var(--accent-color);
+  margin: 0;
+}
+
+.title-block .tagline {
+  font-size: 1.2em;
+  color: var(--text-secondary-color);
+  margin-top: 8px;
 }
