@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    height: 100%; /* Garante que body e html ocupem toda a altura */
+}
+
 body {
     font-family: 'Lato', sans-serif;
     background-color: var(--bg-color);
@@ -52,14 +56,14 @@ body {
 /* Header */
 header {
     background-color: var(--bg-color);
-    padding: 20px 40px;
+    padding: 40px 20px; /* Aumenta o padding vertical */
     text-align: center;
     position: relative;
     display: flex;
     justify-content: center; /* Centraliza o conteúdo do header */
     align-items: center;
     overflow: hidden; /* Para Lottie */
-    min-height: 150px; /* Altura mínima para o header */
+    min-height: 150px; /* Garante altura mínima */
 }
 
 .header-content {
@@ -68,11 +72,11 @@ header {
     align-items: center;
     width: 100%;
     max-width: 1200px; /* Limita largura do conteúdo do header */
-    gap: 20px; /* Espaço entre logo e lottie */
+    gap: 40px; /* Espaço entre logo e lottie */
 }
 
 .logo {
-    max-width: 150px; /* Ajuste o tamanho da logo conforme necessário */
+    max-width: 200px; /* Ajuste o tamanho da logo conforme necessário */
     height: auto;
     display: block;
     filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5)); /* Sombra para destacar a logo */
@@ -81,56 +85,71 @@ header {
 .lottie-animation-container {
     width: 200px; /* Tamanho do container Lottie */
     height: 200px;
-    /* Adicione mais estilos se necessário para posicionamento do Lottie */
+    /* Se você tem um Lottie, talvez precise de overflow: hidden aqui para que não saia do container */
+}
+
+/* Main content */
+main {
+    flex-grow: 1; /* Faz o conteúdo principal ocupar o espaço restante */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente o conteúdo se for menor que a tela */
+    align-items: center; /* Centraliza horizontalmente o conteúdo */
 }
 
 /* Hero Section */
 .hero-section {
     text-align: center;
-    padding: 60px 20px;
+    padding: 80px 20px; /* Aumenta o padding vertical */
     background-color: var(--bg-color);
+    width: 100%; /* Ocupa a largura total */
+    max-width: 900px; /* Limita a largura do conteúdo principal */
+    margin: 0 auto; /* Centraliza a seção */
 }
 
 .hero-section h1 {
-    font-size: 3em;
+    font-size: 3.5em; /* Aumenta o tamanho da fonte do título */
     color: var(--highlight-color);
-    margin-bottom: 15px;
+    margin-bottom: 20px; /* Aumenta a margem inferior */
     text-shadow: 0 0 10px rgba(212, 175, 55, 0.7);
 }
 
 .hero-section .tagline {
-    font-size: 1.4em;
+    font-size: 1.6em; /* Aumenta o tamanho da fonte da tagline */
     color: var(--text-base-color);
-    margin-bottom: 25px;
+    margin-bottom: 30px; /* Aumenta a margem inferior */
 }
 
 .hero-section .verse {
-    font-size: 1.1em;
+    font-size: 1.2em; /* Aumenta o tamanho da fonte do versículo */
     color: var(--text-secondary-color);
     font-style: italic;
     max-width: 700px;
-    margin: 0 auto;
+    margin: 0 auto 30px; /* Aumenta a margem inferior */
 }
 
 /* Connect Section (Destaque principal) */
 .connect-section {
     background-color: var(--bg-color);
-    padding: 60px 20px;
+    padding: 80px 20px; /* Aumenta o padding vertical */
     text-align: center;
+    width: 100%; /* Ocupa a largura total */
+    max-width: 900px; /* Limita a largura do conteúdo principal */
+    margin: 0 auto; /* Centraliza a seção */
 }
 
 .connect-section h2 {
-    font-size: 2.5em;
+    font-size: 3em; /* Aumenta o tamanho da fonte do título da seção */
     color: var(--highlight-color);
-    margin-bottom: 40px;
+    margin-bottom: 50px; /* Aumenta a margem inferior */
     text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
 }
 
 .social-icons {
     display: flex;
     justify-content: center;
-    gap: 30px; /* Espaçamento entre os ícones */
-    margin-bottom: 50px;
+    gap: 50px; /* Aumenta o espaçamento entre os ícones */
+    margin-bottom: 60px; /* Aumenta a margem inferior */
     flex-wrap: wrap; /* Quebra linha em telas menores */
 }
 
@@ -140,14 +159,14 @@ header {
 }
 
 .social-icons img {
-    width: 60px; /* Tamanho dos ícones sociais */
-    height: 60px;
+    width: 80px; /* Aumenta o tamanho dos ícones sociais */
+    height: 80px;
     border-radius: 50%; /* Para ícones que podem ter fundo, garantir formato */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidade */
 }
 
 .social-icons a:hover {
-    transform: scale(1.15); /* Aumenta ao passar o mouse */
+    transform: scale(1.2); /* Aumenta mais ao passar o mouse */
     filter: drop-shadow(0 0 20px var(--highlight-color)); /* Brilho dourado ao passar o mouse */
 }
 
@@ -156,21 +175,22 @@ header {
     display: flex;
     flex-direction: column; /* Botões um abaixo do outro */
     align-items: center;
-    gap: 20px; /* Espaçamento entre os botões */
+    gap: 30px; /* Aumenta o espaçamento entre os botões */
     max-width: 600px;
     margin: 0 auto;
 }
 
 .btn {
     display: block; /* Ocupa a largura total do container */
-    padding: 18px 30px;
+    padding: 20px 40px; /* Aumenta o padding dos botões */
     border-radius: 50px; /* Botões arredondados */
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.1em;
+    font-size: 1.2em; /* Aumenta o tamanho da fonte dos botões */
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     width: 100%; /* Garante que os botões ocupem a largura máxima do container */
     text-align: center;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura/altura */
 }
 
 .btn-primary {
@@ -202,31 +222,88 @@ footer {
     background-color: var(--bg-color);
     color: var(--text-secondary-color);
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px 20px; /* Aumenta o padding vertical */
     font-size: 0.9em;
     margin-top: auto; /* Empurra o footer para o final da página */
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Media Queries para Responsividade */
+/* Media Queries para Responsividade (Ajustes para telas menores) */
 @media (max-width: 768px) {
     header {
-        padding: 15px 20px;
+        padding: 30px 20px;
     }
 
     .header-content {
         flex-direction: column; /* Empilha logo e lottie em telas menores */
-        gap: 15px;
+        gap: 20px;
     }
 
+    .logo {
+        max-width: 180px;
+    }
+
+    .hero-section {
+        padding: 60px 20px;
+    }
     .hero-section h1 {
+        font-size: 2.8em;
+    }
+
+    .hero-section .tagline {
+        font-size: 1.3em;
+    }
+
+    .connect-section {
+        padding: 60px 20px;
+    }
+    .connect-section h2 {
         font-size: 2.2em;
+    }
+
+    .social-icons {
+        gap: 30px;
+    }
+
+    .social-icons img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .quick-links {
+        padding: 0 15px; /* Adiciona padding para botões em telas menores */
+        gap: 20px;
+    }
+
+    .btn {
+        font-size: 1.1em;
+        padding: 18px 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 20px 15px;
+    }
+
+    .logo {
+        max-width: 150px;
+    }
+
+    .hero-section {
+        padding: 40px 15px;
+    }
+    .hero-section h1 {
+        font-size: 2em;
     }
 
     .hero-section .tagline {
         font-size: 1.1em;
     }
 
+    .connect-section {
+        padding: 40px 15px;
+    }
     .connect-section h2 {
         font-size: 1.8em;
     }
@@ -241,38 +318,11 @@ footer {
     }
 
     .quick-links {
-        padding: 0 15px; /* Adiciona padding para botões em telas menores */
+        gap: 15px;
     }
 
     .btn {
         font-size: 1em;
         padding: 15px 25px;
-    }
-}
-
-@media (max-width: 480px) {
-    .logo {
-        max-width: 120px;
-    }
-
-    .hero-section h1 {
-        font-size: 1.8em;
-    }
-
-    .hero-section .tagline {
-        font-size: 1em;
-    }
-
-    .social-icons {
-        gap: 15px;
-    }
-
-    .social-icons img {
-        width: 45px;
-        height: 45px;
-    }
-
-    .quick-links {
-        gap: 15px;
     }
 }
