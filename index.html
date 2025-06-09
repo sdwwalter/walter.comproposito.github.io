@@ -4,35 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Walter Miranda | Com Propósito</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
-  
   <style>
     body {
       margin: 0;
       font-family: 'Lato', sans-serif;
-      background-color: #f8f8f5;
-      color: #333;
+      background-color: #1a0c0c;
+      color: #fff;
     }
 
     header {
-      background-color: #0f1e1e;
-      color: white;
-      padding: 20px;
+      background-color: #051616;
+      padding: 30px 20px 20px;
       text-align: center;
-      border-bottom: 5px solid #c8a348;
+      border-bottom: 4px solid #d4af37;
     }
 
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .header-content img.logo {
-      width: 120px;
-      margin-bottom: 15px;
+    .logo {
+      width: 80px;
+      margin-bottom: 10px;
     }
 
     h1 {
@@ -47,120 +39,112 @@
       margin-top: 5px;
     }
 
-    main {
-      padding: 30px 20px;
+    .connect-section {
+      background-color: #1a0c0c;
       text-align: center;
+      padding: 50px 20px;
     }
 
     .connect-section h2 {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
-      margin-bottom: 25px;
-    }
-
-    .social-icons {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
       margin-bottom: 30px;
     }
 
-    .social-icons img {
-      width: 40px;
-      height: 40px;
-      transition: transform 0.3s ease;
-      border-radius: 50%;
+    .icones {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      margin-bottom: 40px;
     }
 
-    .social-icons img:hover {
-      transform: scale(1.2);
+    .icones a img {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px #d4af37;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .icones a img:hover {
+      transform: scale(1.15);
+      box-shadow: 0 0 20px #fff;
     }
 
     .quick-links {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 30px;
       flex-wrap: wrap;
     }
 
     .btn {
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
+      padding: 14px 24px;
       font-size: 16px;
-      font-weight: 600;
+      border-radius: 8px;
       cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease;
-      text-decoration: none;
+      border: none;
+      transition: background-color 0.3s, transform 0.3s;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
     }
 
     .btn-primary {
-      background-color: #c8a348;
-      color: white;
-      box-shadow: 0 4px 10px rgba(200, 163, 72, 0.4);
+      background-color: #d4af37;
+      color: #000;
+      font-weight: bold;
     }
 
     .btn-primary:hover {
-      background-color: #b28d3b;
-      transform: translateY(-2px);
+      background-color: #f0cf5d;
+      transform: scale(1.05);
     }
 
     .btn-secondary {
-      background-color: #0f1e1e;
-      color: white;
-      border: 2px solid #c8a348;
-      box-shadow: 0 4px 10px rgba(15, 30, 30, 0.4);
+      background-color: #000;
+      color: #fff;
+      font-weight: bold;
+      border: 2px solid #d4af37;
     }
 
     .btn-secondary:hover {
-      background-color: #1b2d2d;
-      transform: translateY(-2px);
+      background-color: #1f1f1f;
+      transform: scale(1.05);
     }
 
     footer {
-      background-color: #0f1e1e;
-      color: #ccc;
-      padding: 15px 10px;
       text-align: center;
+      background-color: #051616;
+      padding: 30px 20px;
       font-size: 14px;
-    }
-
-    footer p {
-      margin: 4px 0;
+      color: #aaa;
     }
   </style>
 </head>
-
 <body>
   <header>
-    <div class="header-content">
-      <img src="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" alt="Logo Walter Miranda" class="logo" />
-      <div>
-        <h1>Walter Miranda | Com Propósito</h1>
-        <p class="tagline">Servindo com propósito. Conectando destinos. Transformando vidas.</p>
-      </div>
-    </div>
+    <img src="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" alt="Logo Walter Miranda" class="logo" />
+    <h1>Walter Miranda | Com Propósito</h1>
+    <p class="tagline">Servindo com propósito. Conectando destinos. Transformando vidas.</p>
   </header>
 
   <main>
     <section class="connect-section">
       <h2>Fale comigo</h2>
-      <div class="social-icons">
+      <div class="icones">
         <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Instagram" />
+          <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Ícone Instagram" />
         </a>
-        <a href="https://wa.me/5543988616329?text=Olá%20Walter%2C%20gostaria%20de%20falar%20com%20você%20sobre..." target="_blank" aria-label="WhatsApp">
-          <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="WhatsApp" />
+        <a href="https://wa.me/5543988616329" target="_blank" aria-label="WhatsApp">
+          <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="Ícone WhatsApp" />
         </a>
         <a href="mailto:walter.comproposito@gmail.com" aria-label="Email">
-          <img src="https://i.ibb.co/B2YJPcM1/IMG-20250608-WA0006.jpg" alt="Email" />
+          <img src="https://i.ibb.co/B2YJPcM1/IMG-20250608-WA0006.jpg" alt="Ícone Email" />
         </a>
-        <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <img src="https://i.ibb.co/7JKxjjz0/IMG-20250608-WA0010.jpg" alt="YouTube" />
+        <a href="https://youtube.com/waltercomproposito" target="_blank" aria-label="YouTube">
+          <img src="https://i.ibb.co/7JKxjjz0/IMG-20250608-WA0010.jpg" alt="Ícone YouTube" />
         </a>
         <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
-          <img src="https://i.ibb.co/HDs9GYpK/IMG-20250608-WA0007.jpg" alt="TikTok" />
+          <img src="https://i.ibb.co/HDs9GYpK/IMG-20250608-WA0007.jpg" alt="Ícone TikTok" />
         </a>
       </div>
 
