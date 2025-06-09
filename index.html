@@ -4,199 +4,175 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Walter Miranda | Com Propósito</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
-
+  
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Lato', sans-serif;
-      background-color: #0a1f1c;
-      color: #f0eade;
-      line-height: 1.6;
-      padding: 0;
       margin: 0;
-    }
-
-    .playfair-display {
-      font-family: 'Playfair Display', serif;
-    }
-
-    .lato {
       font-family: 'Lato', sans-serif;
+      background-color: #f8f8f5;
+      color: #333;
     }
 
     header {
-      background-color: #0a1f1c;
-      padding: 2rem 1rem;
-      display: flex;
-      justify-content: center;
-      border-bottom: 1px solid #1a3a32;
+      background-color: #0f1e1e;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 5px solid #c8a348;
     }
 
     .header-content {
       display: flex;
+      flex-direction: column;
       align-items: center;
-      gap: 1rem;
     }
 
-    .logo {
-      height: 80px;
-      width: auto;
-      filter: drop-shadow(2px 2px 6px #00000066);
+    .header-content img.logo {
+      width: 120px;
+      margin-bottom: 15px;
     }
 
-    .title-block h1 {
-      font-size: 2rem;
-      color: #dbc184;
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin: 0;
     }
 
     .tagline {
-      color: #c5b17e;
-      font-size: 1rem;
+      font-size: 16px;
+      color: #ccc;
+      margin-top: 5px;
     }
 
-    .connect-section {
-      padding: 3rem 1rem;
+    main {
+      padding: 30px 20px;
       text-align: center;
     }
 
     .connect-section h2 {
-      font-size: 1.8rem;
-      color: #dbc184;
-      margin-bottom: 1.5rem;
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      margin-bottom: 25px;
     }
 
     .social-icons {
       display: flex;
       justify-content: center;
-      gap: 1.2rem;
-      margin-bottom: 2rem;
+      gap: 25px;
       flex-wrap: wrap;
+      margin-bottom: 30px;
     }
 
     .social-icons img {
       width: 40px;
       height: 40px;
       transition: transform 0.3s ease;
-      filter: drop-shadow(1px 1px 2px #00000088);
+      border-radius: 50%;
     }
 
-    .social-icons a:hover img {
-      transform: scale(1.15);
+    .social-icons img:hover {
+      transform: scale(1.2);
     }
 
     .quick-links {
       display: flex;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 20px;
       flex-wrap: wrap;
-      margin-top: 1rem;
     }
 
     .btn {
-      padding: 0.8rem 1.6rem;
-      border-radius: 30px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.3s ease;
       text-decoration: none;
-      font-weight: bold;
-      font-size: 1rem;
-      transition: all 0.3s ease-in-out;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     }
 
     .btn-primary {
-      background-color: #dbc184;
-      color: #0a1f1c;
+      background-color: #c8a348;
+      color: white;
+      box-shadow: 0 4px 10px rgba(200, 163, 72, 0.4);
     }
 
     .btn-primary:hover {
-      background-color: #c5b17e;
-      color: #000;
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      background-color: #b28d3b;
+      transform: translateY(-2px);
     }
 
     .btn-secondary {
-      background-color: transparent;
-      border: 2px solid #dbc184;
-      color: #dbc184;
+      background-color: #0f1e1e;
+      color: white;
+      border: 2px solid #c8a348;
+      box-shadow: 0 4px 10px rgba(15, 30, 30, 0.4);
     }
 
     .btn-secondary:hover {
-      background-color: #dbc184;
-      color: #0a1f1c;
-      transform: scale(1.05);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+      background-color: #1b2d2d;
+      transform: translateY(-2px);
     }
 
     footer {
-      padding: 2rem 1rem;
+      background-color: #0f1e1e;
+      color: #ccc;
+      padding: 15px 10px;
       text-align: center;
-      background-color: #0a1f1c;
-      border-top: 1px solid #1a3a32;
-      font-size: 0.9rem;
-      color: #999;
+      font-size: 14px;
     }
 
-    .fade-in {
-      animation: fadeIn ease 2s;
-      animation-fill-mode: forwards;
-      opacity: 0;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+    footer p {
+      margin: 4px 0;
     }
   </style>
 </head>
+
 <body>
-  <header class="fade-in">
+  <header>
     <div class="header-content">
       <img src="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" alt="Logo Walter Miranda" class="logo" />
-      <div class="title-block">
-        <h1 class="playfair-display">Walter Miranda | Com Propósito</h1>
-        <p class="tagline lato">Servindo com propósito. Conectando destinos. Transformando vidas.</p>
+      <div>
+        <h1>Walter Miranda | Com Propósito</h1>
+        <p class="tagline">Servindo com propósito. Conectando destinos. Transformando vidas.</p>
       </div>
     </div>
   </header>
 
   <main>
     <section class="connect-section">
-      <h2 class="playfair-display fade-in">Fale comigo</h2>
-      <div class="social-icons fade-in">
+      <h2>Fale comigo</h2>
+      <div class="social-icons">
         <a href="https://instagram.com" target="_blank" aria-label="Instagram">
-          <img src="https://i.ibb.co/xHyv6Cw/instagram.png" alt="Ícone Instagram">
+          <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Instagram" />
         </a>
-        <a href="https://wa.me/5543988616329?text=Olá%2C%20gostaria%20de%20falar%20com%20Walter%20Miranda%20%7C%20Com%20Propósito" target="_blank" aria-label="WhatsApp">
-          <img src="https://i.ibb.co/SmQtjbf/whatsapp.png" alt="Ícone WhatsApp">
+        <a href="https://wa.me/5543988616329?text=Olá%20Walter%2C%20gostaria%20de%20falar%20com%20você%20sobre..." target="_blank" aria-label="WhatsApp">
+          <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="WhatsApp" />
         </a>
-        <a href="mailto:seuemail@email.com" aria-label="Email">
-          <img src="https://i.ibb.co/P9TzLf5/email.png" alt="Ícone Email">
+        <a href="mailto:walter.comproposito@gmail.com" aria-label="Email">
+          <img src="https://i.ibb.co/B2YJPcM1/IMG-20250608-WA0006.jpg" alt="Email" />
         </a>
         <a href="https://youtube.com" target="_blank" aria-label="YouTube">
-          <img src="https://i.ibb.co/GQv9jfs/youtube.png" alt="Ícone YouTube">
+          <img src="https://i.ibb.co/7JKxjjz0/IMG-20250608-WA0010.jpg" alt="YouTube" />
         </a>
         <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
-          <img src="https://i.ibb.co/ncMQ1by/tiktok.png" alt="Ícone TikTok">
+          <img src="https://i.ibb.co/HDs9GYpK/IMG-20250608-WA0007.jpg" alt="TikTok" />
         </a>
       </div>
 
-      <div class="quick-links fade-in">
-        <a href="URL_CORRETAGEM" class="btn btn-secondary lato" target="_blank">Corretor com Propósito</a>
-        <a href="URL_MENTORIA" class="btn btn-primary lato" target="_blank">Mentoria com Propósito</a>
+      <div class="quick-links">
+        <a href="URL_CORRETAGEM" class="btn btn-secondary" target="_blank">Corretor com Propósito</a>
+        <a href="URL_MENTORIA" class="btn btn-primary" target="_blank">Mentoria com Propósito</a>
       </div>
     </section>
   </main>
 
-  <footer class="fade-in">
-    <p class="lato">&copy; 2025 Walter Miranda | Com Propósito. Todos os direitos reservados.</p>
+  <footer>
+    <p>&copy; 2025 Walter Miranda | Com Propósito. Todos os direitos reservados.</p>
     <p>CNPJ 56.345.153/0001-25</p>
   </footer>
 </body>
