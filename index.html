@@ -45,10 +45,39 @@
       padding: 50px 20px;
     }
 
-    .connect-section h2 {
+    .fale-comigo-bloco {
+      display: inline-block;
+      margin: 0 auto 30px;
+      padding: 16px 32px;
+      border: 2px solid #d4af37;
+      border-radius: 12px;
+      background-color: rgba(212, 175, 55, 0.08);
       font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      margin-bottom: 30px;
+      font-size: 22px;
+      color: #d4af37;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
+      text-align: center;
+      animation: glow 2.5s ease-in-out infinite alternate;
+      transition: transform 0.3s ease;
+    }
+
+    .fale-comigo-bloco:hover {
+      transform: scale(1.03);
+    }
+
+    .fale-comigo-bloco p {
+      margin: 6px 0 0;
+      font-size: 16px;
+      color: #f8e7b2;
+    }
+
+    @keyframes glow {
+      0% {
+        box-shadow: 0 0 8px rgba(212, 175, 55, 0.3);
+      }
+      100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.6);
+      }
     }
 
     .icones {
@@ -120,7 +149,6 @@
       color: #aaa;
     }
 
-    /* Botão flutuante WhatsApp */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -196,7 +224,11 @@
 
   <main>
     <section class="connect-section">
-      <h2>Fale comigo</h2>
+      <div class="fale-comigo-bloco">
+        <h2>Fale comigo</h2>
+        <p>Escolha o canal ideal e fale comigo agora.</p>
+      </div>
+
       <div class="icones">
         <a href="https://instagram.com/euwaltermiranda" target="_blank" aria-label="Instagram">
           <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Ícone Instagram" />
@@ -227,7 +259,6 @@
     <p>CNPJ 56.345.153/0001-25</p>
   </footer>
 
-  <!-- Botão flutuante de WhatsApp -->
   <div class="whatsapp-float" id="whatsappFloat">
     <div class="whatsapp-balloon" id="whatsappBalloon">
       <img src="https://i.ibb.co/Gvv4PQ3F/Adobe-Express-file.png" alt="Logo Walter Miranda" class="balloon-img" />
