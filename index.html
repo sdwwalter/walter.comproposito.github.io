@@ -2,214 +2,48 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Considere extrair o CSS para um arquivo externo para melhor performance -->
   <link rel="shortcut icon" href="https://i.ibb.co/nNj8tHkd/escudo-transparente-favicon.png" type="image/png" />
   <title>Walter Miranda | Com Propósito</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com"/>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Lato', sans-serif;
-      background-color: #051616;
-      color: #fff;
-    }
-
-    header {
-      background-color: #051616;
-      padding: 30px 20px 20px;
-      text-align: center;
-      border-bottom: 4px solid #d4af37;
-    }
-
-    .logo {
-      width: 80px;
-      margin-bottom: 10px;
-    }
-
-    h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 28px;
-      margin: 0;
-    }
-
-    .tagline {
-      font-size: 16px;
-      color: #ccc;
-      margin-top: 5px;
-    }
-
-    .connect-section {
-      background-color: #051616;
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    .fale-comigo-bloco {
-      display: inline-block;
-      margin: 0 auto 30px;
-      padding: 16px 32px;
-      border: 2px solid #d4af37;
-      border-radius: 12px;
-      background-color: rgba(212, 175, 55, 0.08);
-      font-family: 'Playfair Display', serif;
-      font-size: 22px;
-      color: #d4af37;
-      box-shadow: 0 0 10px rgba(212, 175, 55, 0.4);
-      text-align: center;
-      animation: glow 2.5s ease-in-out infinite alternate;
-      transition: transform 0.3s ease;
-    }
-
-    .fale-comigo-bloco:hover {
-      transform: scale(1.03);
-    }
-
-    .fale-comigo-bloco p {
-      margin: 6px 0 0;
-      font-size: 16px;
-      color: #f8e7b2;
-    }
-
-    @keyframes glow {
-      0% { box-shadow: 0 0 8px rgba(212, 175, 55, 0.3); }
-      100% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.6); }
-    }
-
-    .icones {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      margin-bottom: 40px;
-      flex-wrap: wrap;
-    }
-
-    .icones a img {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      box-shadow: 0 0 10px #d4af37;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .icones a img:hover {
-      transform: scale(1.15);
-      box-shadow: 0 0 20px #fff;
-    }
-
-    .quick-links {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-    }
-
-    .btn {
-      padding: 14px 24px;
-      font-size: 16px;
-      border-radius: 8px;
-      cursor: pointer;
-      border: none;
-      transition: background-color 0.3s, transform 0.3s;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
-    }
-
-    .btn-primary {
-      background-color: #d4af37;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .btn-primary:hover {
-      background-color: #f0cf5d;
-      transform: scale(1.05);
-    }
-
-    .btn-secondary {
-      background-color: #000;
-      color: #fff;
-      font-weight: bold;
-      border: 2px solid #d4af37;
-    }
-
-    .btn-secondary:hover {
-      background-color: #1f1f1f;
-      transform: scale(1.05);
-    }
-
-    footer {
-      text-align: center;
-      background-color: #051616;
-      padding: 30px 20px;
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    .whatsapp-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 999;
-    }
-
-    .whatsapp-icon {
-      width: 60px;
-      height: 60px;
-      border-radius: 50%;
-      box-shadow: 0 0 12px #25D366;
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp-icon:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp-balloon {
-      display: none;
-      position: absolute;
-      bottom: 80px;
-      right: 0;
-      width: 260px;
-      background-color: #1b2d20;
-      border: 1px solid #d4af37;
-      border-radius: 12px;
-      padding: 10px;
-      color: #fff;
-      font-size: 14px;
-      box-shadow: 0 0 10px #25D366;
-    }
-
-    .balloon-img {
-      width: 50px;
-      float: left;
-      margin-right: 10px;
-      border-radius: 50%;
-    }
-
-    .balloon-text p {
-      margin: 0;
-      line-height: 1.4;
-    }
-
-    .whatsapp-link {
-      color: #fff;
-      font-weight: bold;
-      text-decoration: underline;
-    }
-
-    @media (hover: hover) {
-      .whatsapp-float:hover .whatsapp-balloon {
-        display: block;
-      }
-    }
-
-    @media (hover: none) {
-      .whatsapp-icon:active + .whatsapp-balloon,
-      .whatsapp-balloon:active {
-        display: block;
-      }
-    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: 'Lato', sans-serif; background-color: #051616; color: #fff; }
+    header { text-align: center; padding: 2rem 1rem 1rem; border-bottom: 4px solid #d4af37; }
+    .logo { width: 80px; margin-bottom: 0.5rem; }
+    h1 { font-family: 'Playfair Display', serif; font-size: 2rem; margin: 0; }
+    .tagline { font-size: 1rem; color: #ccc; margin-top: 0.5rem; }
+    main { padding: 2rem 1rem; text-align: center; }
+    .fale-comigo-bloco { display: inline-block; margin-bottom: 2rem; padding: 1rem 1.5rem; border: 2px solid #d4af37;
+      border-radius: 0.75rem; background-color: rgba(212,175,55,0.08); font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; color: #d4af37; box-shadow: 0 0 0.5rem rgba(212,175,55,0.4);
+      animation: glow 2.5s ease-in-out infinite alternate; transition: transform 0.3s; max-width: 90%; }
+    .fale-comigo-bloco:hover { transform: scale(1.03); }
+    @keyframes glow { from { box-shadow: 0 0 0.5rem rgba(212,175,55,0.3); } to { box-shadow: 0 0 1.25rem rgba(212,175,55,0.6); } }
+    .fale-comigo-bloco p { margin: 0.5rem 0 0; font-size: 1rem; color: #f8e7b2; }
+    .icones { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 2rem; }
+    .icone-item { flex: 1 1 80px; max-width: 100px; text-align: center; }
+    .icone-item img { width: 100%; height: auto; border-radius: 50%; box-shadow: 0 0 0.5rem #d4af37;
+      transition: transform 0.3s, box-shadow 0.3s; }
+    .icone-item img:hover { transform: scale(1.1); box-shadow: 0 0 1.25rem #fff; }
+    .icone-item p { margin-top: 0.5rem; color: #ccc; font-size: 0.875rem; }
+    .quick-links { display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-top: 2rem; }
+    .btn { padding: 0.75rem 1.5rem; font-size: 1rem; border-radius: 0.5rem; text-decoration: none;
+      display: inline-block; transition: background-color 0.3s, transform 0.3s; box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.4); }
+    .btn-secondary { background-color: #000; color: #fff; font-weight: bold; border: 2px solid #d4af37; }
+    .btn-secondary:hover { background-color: #1f1f1f; transform: scale(1.05); }
+    footer { text-align: center; padding: 1.5rem 1rem; font-size: 0.875rem; color: #aaa; background-color: #051616; }
+    .whatsapp-float { position: fixed; bottom: 1rem; right: 1rem; }
+    .whatsapp-icon { width: 3.75rem; border-radius: 50%; box-shadow: 0 0 0.75rem #25D366; transition: transform 0.3s; }
+    .whatsapp-icon:hover { transform: scale(1.1); }
+    .whatsapp-balloon { display: none; position: absolute; bottom: 4rem; right: 0; width: 16rem;
+      background-color: #1b2d20; border: 1px solid #d4af37; border-radius: 0.75rem; padding: 0.75rem;
+      color: #fff; font-size: 0.875rem; box-shadow: 0 0 0.5rem #25D366; }
+    .whatsapp-float:hover .whatsapp-balloon { display: block; }
+    @media (max-width:600px){ h1{font-size:1.5rem;} .fale-comigo-bloco{font-size:1rem;padding:.75rem 1rem;} }
   </style>
 </head>
 <body>
@@ -218,68 +52,59 @@
     <h1>Walter Miranda | Com Propósito</h1>
     <p class="tagline">Servindo com propósito. Conectando destinos. Transformando vidas.</p>
   </header>
-
   <main>
     <section class="connect-section">
       <div class="fale-comigo-bloco">
         <h2>Fale comigo</h2>
         <p>Escolha o canal ideal e fale comigo agora.</p>
       </div>
-
       <div class="icones">
-  <div>
-    <a href="https://instagram.com/euwaltermiranda" target="_blank">
-      <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Instagram" />
-    </a>
-    <p style="margin-top: 8px; color: #ccc; font-size: 14px;">Instagram</p>
-  </div>
-  <div>
-    <a href="https://wa.me/5543988616329?text=Ol%C3%A1%2C+Walter%21+Vi+seu+site+e+quero+saber+mais+sobre+como+voc%C3%AA+pode+me+ajudar." target="_blank">
-      <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="WhatsApp" />
-    </a>
-    <p style="margin-top: 8px; color: #ccc; font-size: 14px;">WhatsApp</p>
-  </div>
-  <div>
-    <a href="mailto:walter.comproposito@gmail.com">
-      <img src="https://i.ibb.co/B2YJPcM1/IMG-20250608-WA0006.jpg" alt="Email" />
-    </a>
-    <p style="margin-top: 8px; color: #ccc; font-size: 14px;">Email</p>
-  </div>
-  <div>
-    <a href="https://www.youtube.com/@WalterMirandacomProposito" target="_blank">
-      <img src="https://i.ibb.co/7JKxjjz0/IMG-20250608-WA0010.jpg" alt="YouTube" />
-    </a>
-    <p style="margin-top: 8px; color: #ccc; font-size: 14px;">YouTube</p>
-  </div>
-  <div>
-    <a href="https://www.tiktok.com/@waltercomproposito" target="_blank">
-      <img src="https://i.ibb.co/HDs9GYpK/IMG-20250608-WA0007.jpg" alt="TikTok" />
-    </a>
-    <p style="margin-top: 8px; color: #ccc; font-size: 14px;">TikTok</p>
-  </div>
-</div>
-
+        <div class="icone-item">
+          <a href="https://instagram.com/euwaltermiranda" target="_blank">
+            <img src="https://i.ibb.co/wNVm8PLB/IMG-20250608-WA0009.jpg" alt="Instagram" loading="lazy" />
+          </a>
+          <p>Instagram</p>
+        </div>
+        <div class="icone-item">
+          <a href="https://wa.me/5543988616329?text=Ol%C3%A1%2C+Walter%21+Vi+seu+site+e+quero+saber+mais+sobre+corretagem." target="_blank">
+            <img src="https://i.ibb.co/tPDYMkQP/IMG-20250608-WA0008.jpg" alt="WhatsApp" loading="lazy" />
+          </a>
+          <p>WhatsApp</p>
+        </div>
+        <div class="icone-item">
+          <a href="mailto:walter.comproposito@gmail.com">
+            <img src="https://i.ibb.co/B2YJPcM1/IMG-20250608-WA0006.jpg" alt="Email" loading="lazy" />
+          </a>
+          <p>Email</p>
+        </div>
+        <div class="icone-item">
+          <a href="https://www.youtube.com/@WalterMirandacomProposito" target="_blank">
+            <img src="https://i.ibb.co/7JKxjjz0/IMG-20250608-WA0010.jpg" alt="YouTube" loading="lazy" />
+          </a>
+          <p>YouTube</p>
+        </div>
+        <div class="icone-item">
+          <a href="https://www.tiktok.com/@waltercomproposito" target="_blank">
+            <img src="https://i.ibb.co/HDs9GYpK/IMG-20250608-WA0007.jpg" alt="TikTok" loading="lazy" />
+          </a>
+          <p>TikTok</p>
+        </div>
+      </div>
       <div class="quick-links">
-        <a href="https://sdwwalter.github.io/waltermiranda.imoveis/" class="btn btn-secondary" target="_blank">Corretor com Propósito</a>
-        <a href="https://www.instagram.com/euwaltermiranda/" class="btn btn-primary" target="_blank">Mentoria com Propósito</a>
+        <a href="https://sdwwalter.github.io/waltermiranda.imoveis/" class="btn btn-secondary" target="_blank">Corretor de Imóveis com Propósito</a>
       </div>
     </section>
   </main>
-
   <footer>
     <p>&copy; 2025 Walter Miranda | Com Propósito. Todos os direitos reservados.</p>
     <p>CNPJ 56.345.153/0001-25</p>
   </footer>
-
-  <div class="whatsapp-float" id="whatsappFloat">
-    <div class="whatsapp-balloon" id="whatsappBalloon">
-      <img src="https://i.ibb.co/zWp8QJ9j/whatsapp.jpg" alt="Logo Walter Miranda" class="balloon-img" />
-      <div class="balloon-text">
-        <p><strong>Walter Miranda</strong><br>Atendendo com propósito 🙌<br>
-        <a href="https://wa.me/5543988616329?text=Olá%2C+Walter%21+Vi+seu+site+e+gostaria+de+saber+mais+sobre+%5Bcorretagem+ou+mentoria%5D." target="_blank" class="whatsapp-link">Chamar no WhatsApp</a></p>
-      </div>
+  <div class="whatsapp-float">
+    <div class="whatsapp-balloon">
+      <p><strong>Walter Miranda</strong><br>Atendendo com propósito 🙌<br>
+      <a href="https://wa.me/5543988616329?text=Ol%C3%A1%2C+Walter%21+Vi+seu+site+e+quero+saber+mais+sobre+corretagem." style="color:#d4af37; text-decoration:underline;">Chamar no WhatsApp</a></p>
     </div>
-    <a href="https://wa.me/5543988616329?text=Olá%2C+Walter%21+Vi+seu+site+e+gostaria+de+saber+mais+sobre+%5Bcorretagem+ou+mentoria%5D." target="_blank">
+    <a href="https://wa.me/5543988616329?text=Ol%C3%A1%2C+Walter%21+Vi+seu+site+e+quero+saber+mais+sobre+corretagem." target="_blank">
       <img src="https://i.ibb.co/zWp8QJ9j/whatsapp.jpg" alt="WhatsApp" class="whatsapp-icon" />
     </a>
   </div>
